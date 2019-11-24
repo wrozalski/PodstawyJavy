@@ -1,34 +1,55 @@
 package pl.sda.podstawyjavy;
 
 public class PodstawyJavy {
+
     public static void main(String[] Args) {
-        //char[] mojaTablica1D = {'h', 'e', 'l', 'l', 'o'};  // Tworzymy tablicę 1D
+
+        //char[] mojaTablica1D = {'h', 'e', 'l', 'l', 'o'};
         //for (int a = 0; a < mojaTablica1D.length; a++) {
         //System.out.print(mojaTablica1D[a]);
+        //}
 
-        //char[][] mojaTablica2D = {{'h', 'e', 'l', 'l', 'o'}, {'w', 'o', 'r', 'l', 'd'}}; // Tworzymy tablicę 2D
-        //for (int a = 0; a < mojaTablica2D.length; a++) {
-        //System.out.print(mojaTablica2D[a]);
+        ///////////////////////SPRAWDZANIE ROKU URODZENIA/////////////////////////////////////////////////////////////
+        int YOB = 1981;
+        if (YOB < 1980) {
+            System.out.println("Rok poniżej 1980");
+        } else if (YOB > 1990) {
+            System.out.println("Rok powyżej 1990");
+        } else {
+            System.out.println("Rok pomiędzy 1980 a 1990");
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+    char[][] mojaTablica2D = {{'h', 'e', 'l', 'l', 'o'}, {'w', 'o', 'r', 'l', 'd'}}; // Tworzymy tablicę 2D
+        for(int b = 0; b<mojaTablica2D.length; b++) {
+        System.out.print(mojaTablica2D[b]);
+    }
 
         int[][] mojaTablicaInt = {{1, 2, 3}, {3, 4, 5}, {6, 7, 8}};
-
         // i = 0 to jest pierwsza grupa 123,  i = 1 to jest 345,  i = 2 to jest 678
-        // j = 0
+        // j = 0 to jest pierwsza kolumna 136,  i = 1 to jest 247,  i = 2 to jest 358
         // 123
         // 345
         // 678
         for (int i = 0; i < mojaTablicaInt.length; i++) {
-            for (int j = 0; j < mojaTablicaInt[j].length; j++) {
+            for (int j = 0; j < mojaTablicaInt[i].length; j++) {   // mojaTablicaInt[i] kolumny 123
                 System.out.println(mojaTablicaInt[i][j]);
             }
         }
-    }
-
+        // Integer mojeZamowienie = Integer.getInteger("33");  // Integer ze stringa " "
+        /*int i = 0
+        System.out.println(i);   //0 wartość i przed rozpoczęciem działań
+        System.out.println(++i); //1 zwiekszylismy wart i przed wykonaniem kodu
+        System.out.println(i);
+        System.out.println(i++); //1 zwiększamy wart zmiennej PO WYKONANIU kodu czyli i nadal 1
+        System.out.println(i);   //2 drukuje bieżącą wart zmiennej
+        */
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-        void wydrukujArgumenty (String[]Args){
-            for (int i = 0; i < Args.length; i++) {
-                System.out.println(Args[i]);
-            }
+    void wydrukujArgumenty(String[] Args) {
+        for (int kkk = 0; kkk < Args.length; kkk++) {
+            System.out.println(Args[kkk]);
         }
     }
-
+}
