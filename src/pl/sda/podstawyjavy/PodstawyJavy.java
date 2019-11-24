@@ -5,29 +5,26 @@ import java.util.Scanner;
 public class PodstawyJavy {
 
     public static void main(String[] Args) {
-        Scanner zmiennaWpisywana = new Scanner(System.in);  //System.in wymagany aby do Scannera wpiąć input z kompa
-        int YOB = -1;
-        int liczbaWpisow = 0;  // Dodajac taka wartosc stopujemy petle w jakims momencie
 
-        //Pętla wykona się aż wartość YOB z klawiatury osiągnie 2019 lub więcej
-        while (YOB < 2019 && liczbaWpisow<3) {            // dajemy warunek 3 wpisow
-            liczbaWpisow++;                               // inkrementacja w petli ZAWSZE, jesli na poczatku zaczyna od +1
-                                                          // jesli inkrementacja na koncu to od 0
+        boolean poprawnaWartosc = false;               // boolean dajemy zeby miec podstawe przrewania petli
+        Scanner wpiszLiczbe = new Scanner(System.in);  // petle while piszemy poskanerze zeby go nie tworzyc
 
-            System.out.println(liczbaWpisow + ". Proszę wpisać rok urodzenia");
-            /////Pętla dla pozycji zmiennaWpisywana, ilość wpisywań zmienna iloscZapytan
-            //for (int iloscZapytan = 0; iloscZapytan < 2; iloscZapytan++) {
-
-            //Definiujemy nowa wartosc YOB na wartosc wpisywana z klawiatury
-            YOB = zmiennaWpisywana.nextInt();
-            String powitanie = (YOB == 1980) ?
-                    "Urodzony w 1980 roku BRAWO" :
-                    "Urodziłeś się w " + YOB;
-            System.out.println(powitanie);
-            //}
+        while (poprawnaWartosc == false) {
+            System.out.println("Podaj liczbę od 0 do 9");
+            int liczba = wpiszLiczbe.nextInt();           // Liczba z klawiatury nazwana jako argument int
+            if (liczba >= 0 && liczba <= 9) {
+                poprawnaWartosc = true;
+                if (liczba == 3) {
+                    System.out.println("Dzień dobry");
+                } else if (liczba == 5) {
+                    System.out.println("Dzień dobry");
+                } else {
+                    System.out.println("Standardowa wiadomość");
+                }
+            } else {
+                System.out.println("Podana wartość jest nieprawidlowa");
+            }
         }
-
-
     }
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
