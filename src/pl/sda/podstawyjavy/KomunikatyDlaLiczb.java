@@ -2,8 +2,8 @@ package pl.sda.podstawyjavy;
 
 import java.util.Scanner;
 
-public class KomunikatyDlaLiczb {
-    int liczba = -1;                                       // zmienna liczba na poziomie klasy
+class KomunikatyDlaLiczb {
+    private int liczba = -1;                                       // zmienna liczba na poziomie klasy ustawiona taka żeby nie wykonała metody
 
     void przyjmijLiczbe() {
         boolean poprawnaWartosc = false;
@@ -30,4 +30,12 @@ public class KomunikatyDlaLiczb {
         return liczba;                                                    //
     }
 
+    // Metoda do zmiany wartosci zmiennej prywatanej liczba oraz jej sprawdzenie
+    void ustawWartoscZmiennejLiczba(int nowaWartoscLiczby) {
+        if (nowaWartoscLiczby >= 0 && nowaWartoscLiczby <= 9) {
+            liczba = nowaWartoscLiczby;
+        } else {
+            System.out.println("Nowa wartość jest nieprawidłowa");
+        }
+    }
 }

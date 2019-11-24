@@ -9,6 +9,10 @@ public class PodstawyJavy {
         zmiennaKomunikatyDlaLiczb.przyjmijLiczbe();                               // przyjmijLiczbę wykonanie metody z klasy KomunikatyDlaLiczb
         System.out.println("Poprawnie wprowadzona wartość to: " + zmiennaKomunikatyDlaLiczb.pobierzOstatniaWartoscLiczby());
                                                                                   // Wywolalismy z klasy pobierzOstatniaWartoscLiczby
+        zmiennaKomunikatyDlaLiczb.ustawWartoscZmiennejLiczba(98);
+        System.out.println(zmiennaKomunikatyDlaLiczb.pobierzOstatniaWartoscLiczby());
+        zmiennaKomunikatyDlaLiczb.ustawWartoscZmiennejLiczba(3);
+        System.out.println(zmiennaKomunikatyDlaLiczb.pobierzOstatniaWartoscLiczby());
     }
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
