@@ -1,15 +1,33 @@
 package pl.sda.podstawyjavy;
 
+import java.util.Scanner;
+
 public class PodstawyJavy {
 
     public static void main(String[] Args) {
 
-        //char[] mojaTablica1D = {'h', 'e', 'l', 'l', 'o'};
-        //for (int a = 0; a < mojaTablica1D.length; a++) {
-        //System.out.print(mojaTablica1D[a]);
-        //}
+        Scanner zmiennaWpisywana = new Scanner(System.in);  //System.in wymagany aby do Scannera wpiąć input z kompa
+        System.out.println("Proszę wpisać rok urodzenia");
 
-        ///////////////////////SPRAWDZANIE ROKU URODZENIA/////////////////////////////////////////////////////////////
+        /////Pętla dla pozycji zmiennaWpisywana, ilość wpisywań zmienna iloscZapytan
+        for (int iloscZapytan = 0; iloscZapytan < 5; iloscZapytan++) {
+            int YOB = zmiennaWpisywana.nextInt();
+            String powitanie = (YOB == 1980) ?
+                    "Urodzony w 1980 roku" :
+                    "Nie urodziłeś się w 1980";
+            System.out.println(powitanie);}
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //char[] mojaTablica1D = {'h', 'e', 'l', 'l', 'o'};
+    //for (int a = 0; a < mojaTablica1D.length; a++) {
+    //System.out.print(mojaTablica1D[a]);
+    //}
+
+    ///////////////////////SPRAWDZANIE ROKU URODZENIA/////////////////////////////////////////////////////////////
+
+        /*
         int YOB = 1981;
         if (YOB < 1980) {
             System.out.println("Rok poniżej 1980");
@@ -18,7 +36,15 @@ public class PodstawyJavy {
         } else {
             System.out.println("Rok pomiędzy 1980 a 1990");
         }
-    }
+        */
+/////////////////////////////////////////////Trójargumentowy operator, wynikiem jest println/////////////////////////
+       /*
+        int YOB = 1980;
+        String powitanie = (YOB==1980) ?
+                "Urodzony w 1980 roku":
+                "Nie urodziłeś się w 1980";
+        System.out.println(powitanie);
+       */
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*
