@@ -27,7 +27,7 @@ class KomunikatyDlaLiczb {
     }
 
     int pobierzOstatniaWartoscLiczby() {
-        return liczba;                                                    //
+        return liczba;
     }
 
     // Metoda do zmiany wartosci zmiennej prywatanej liczba oraz jej sprawdzenie
@@ -36,6 +36,16 @@ class KomunikatyDlaLiczb {
             liczba = nowaWartoscLiczby;
         } else {
             System.out.println("Nowa wartość jest nieprawidłowa");
+        }
+    }
+
+    void ustawWartosciZmiennejLiczba(int... liczby) {
+
+        for (int argument : liczby) {
+            if (argument >= 0 && argument <= 9) {
+                liczba = argument;
+                break;
+            }
         }
     }
 }

@@ -1,20 +1,45 @@
 package pl.sda.podstawyjavy;
 
+import pl.sda.podstawyjavy.Samochod.Samochod;
+
 import java.util.Scanner;
 
 public class PodstawyJavy {
 
     public static void main(String[] Args) {
-        KomunikatyDlaLiczb zmiennaKomunikatyDlaLiczb = new KomunikatyDlaLiczb();  // stworz nowy obiekt na podstawie klasy KomunikatDlaLiczba
+        Samochod bmw = new Samochod("benzyna", "5", "BMW", "Rouge");
+        Samochod fiat = new Samochod("LPG", "Tipo", "Fiat", "Khaki");
+
+        fiat.drive();
+        bmw.drive();
+        fiat.drive();
+
+        System.out.println(fiat.makeModel()+ " " + fiat.currentMileage() + "km");
+        System.out.println(bmw.makeModel()+ " " + bmw.currentMileage() + "km");
+
+
+    }
+
+
+
+
+
+
+        /*KomunikatyDlaLiczb zmiennaKomunikatyDlaLiczb = new KomunikatyDlaLiczb();  // stworz nowy obiekt na podstawie klasy KomunikatDlaLiczba
         zmiennaKomunikatyDlaLiczb.przyjmijLiczbe();                               // przyjmijLiczbę wykonanie metody z klasy KomunikatyDlaLiczb
         System.out.println("Poprawnie wprowadzona wartość to: " + zmiennaKomunikatyDlaLiczb.pobierzOstatniaWartoscLiczby());
                                                                                   // Wywolalismy z klasy pobierzOstatniaWartoscLiczby
-        zmiennaKomunikatyDlaLiczb.ustawWartoscZmiennejLiczba(98);
-        System.out.println(zmiennaKomunikatyDlaLiczb.pobierzOstatniaWartoscLiczby());
-        zmiennaKomunikatyDlaLiczb.ustawWartoscZmiennejLiczba(3);
-        System.out.println(zmiennaKomunikatyDlaLiczb.pobierzOstatniaWartoscLiczby());
+        //zmiennaKomunikatyDlaLiczb.ustawWartoscZmiennejLiczba(98);
+        //System.out.println(zmiennaKomunikatyDlaLiczb.pobierzOstatniaWartoscLiczby());
+        //zmiennaKomunikatyDlaLiczb.ustawWartoscZmiennejLiczba(3);
+        //System.out.println(zmiennaKomunikatyDlaLiczb.pobierzOstatniaWartoscLiczby());
+
+        zmiennaKomunikatyDlaLiczb.ustawWartosciZmiennejLiczba(500, 76, 10, 6, 3);
     }
+    */
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     //char[] mojaTablica1D = {'h', 'e', 'l', 'l', 'o'};
     //for (int a = 0; a < mojaTablica1D.length; a++) {
