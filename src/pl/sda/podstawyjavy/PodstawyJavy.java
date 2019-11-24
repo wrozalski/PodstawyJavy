@@ -5,19 +5,30 @@ import java.util.Scanner;
 public class PodstawyJavy {
 
     public static void main(String[] Args) {
-
         Scanner zmiennaWpisywana = new Scanner(System.in);  //System.in wymagany aby do Scannera wpiąć input z kompa
-        System.out.println("Proszę wpisać rok urodzenia");
+        int YOB = -1;
+        int liczbaWpisow = 0;  // Dodajac taka wartosc stopujemy petle w jakims momencie
 
-        /////Pętla dla pozycji zmiennaWpisywana, ilość wpisywań zmienna iloscZapytan
-        for (int iloscZapytan = 0; iloscZapytan < 5; iloscZapytan++) {
-            int YOB = zmiennaWpisywana.nextInt();
+        //Pętla wykona się aż wartość YOB z klawiatury osiągnie 2019 lub więcej
+        while (YOB < 2019 && liczbaWpisow<3) {            // dajemy warunek 3 wpisow
+            liczbaWpisow++;                               // inkrementacja w petli ZAWSZE, jesli na poczatku zaczyna od +1
+                                                          // jesli inkrementacja na koncu to od 0
+
+            System.out.println(liczbaWpisow + ". Proszę wpisać rok urodzenia");
+            /////Pętla dla pozycji zmiennaWpisywana, ilość wpisywań zmienna iloscZapytan
+            //for (int iloscZapytan = 0; iloscZapytan < 2; iloscZapytan++) {
+
+            //Definiujemy nowa wartosc YOB na wartosc wpisywana z klawiatury
+            YOB = zmiennaWpisywana.nextInt();
             String powitanie = (YOB == 1980) ?
-                    "Urodzony w 1980 roku" :
-                    "Nie urodziłeś się w 1980";
-            System.out.println(powitanie);}
-    }
+                    "Urodzony w 1980 roku BRAWO" :
+                    "Urodziłeś się w " + YOB;
+            System.out.println(powitanie);
+            //}
+        }
 
+
+    }
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //char[] mojaTablica1D = {'h', 'e', 'l', 'l', 'o'};
