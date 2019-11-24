@@ -5,26 +5,10 @@ import java.util.Scanner;
 public class PodstawyJavy {
 
     public static void main(String[] Args) {
-
-        boolean poprawnaWartosc = false;               // boolean dajemy zeby miec podstawe przrewania petli
-        Scanner wpiszLiczbe = new Scanner(System.in);  // petle while piszemy poskanerze zeby go nie tworzyc
-
-        while (poprawnaWartosc == false) {
-            System.out.println("Podaj liczbę od 0 do 9");
-            int liczba = wpiszLiczbe.nextInt();           // Liczba z klawiatury nazwana jako argument int
-            if (liczba >= 0 && liczba <= 9) {
-                poprawnaWartosc = true;
-                if (liczba == 3) {
-                    System.out.println("Dzień dobry");
-                } else if (liczba == 5) {
-                    System.out.println("Dzień dobry");
-                } else {
-                    System.out.println("Standardowa wiadomość");
-                }
-            } else {
-                System.out.println("Podana wartość jest nieprawidlowa");
-            }
-        }
+        KomunikatyDlaLiczb zmiennaKomunikatyDlaLiczb = new KomunikatyDlaLiczb();  // stworz nowy obiekt na podstawie klasy KomunikatDlaLiczba
+        zmiennaKomunikatyDlaLiczb.przyjmijLiczbe();                               // przyjmijLiczbę wykonanie metody z klasy KomunikatyDlaLiczb
+        System.out.println("Poprawnie wprowadzona wartość to: " + zmiennaKomunikatyDlaLiczb.pobierzOstatniaWartoscLiczby());
+                                                                                  // Wywolalismy z klasy pobierzOstatniaWartoscLiczby
     }
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
